@@ -9,10 +9,10 @@
 
 |Nome              |RA            |
 |------------------|-------------:|
-|Isac Petinate     |1140481822020 |
-|Giovani Manganotti|1140481822020 |
-|Renan             |1140481822020 |
-|Victor Pradella   |1140481822018 |
+|Isac Petinate     |xxxxxxxxx2020 |
+|Giovani Manganotti|xxxxxxxxx2020 |
+|Renan             |xxxxxxxxx2020 |
+|Victor Pradella   |xxxxxxxxx2018 |
 
 ---
 
