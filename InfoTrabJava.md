@@ -7,12 +7,12 @@
 
 > INTEGRANTES
 
-|Nome              |RA            |
-|------------------|-------------:|
-|Isac Petinate     |xxxxxxxxx2020 |
-|Giovani Manganotti|xxxxxxxxx2020 |
-|Renan             |xxxxxxxxx2020 |
-|Victor Pradella   |xxxxxxxxx2018 |
+|Nome              |RA             |
+|------------------|:-------------:|
+|Isac Petinate     |xxxxxxxxx2020  |
+|Giovani Manganotti|xxxxxxxxx2020  |
+|Renan             |xxxxxxxxx2020  |
+|Victor Pradella   |xxxxxxxxx2018  |
 
 ---
 
