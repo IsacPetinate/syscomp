@@ -8,6 +8,8 @@ package ProjectSales;
 
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 // import java.util.ArrayList;
 
 public class Vendedor
@@ -17,6 +19,7 @@ public class Vendedor
         Scanner entrada = new Scanner (System.in);
         int opcao = 0;
 
+        System.out.println();
         System.out.println("__________________________________");
         System.out.println();
         System.out.println("O que deseja? \n");
@@ -31,9 +34,9 @@ public class Vendedor
         switch (opcao)
         {
             case 1:
-                comprar();
+                cadastrarProdutos();
             case 2:
-                consultar();
+                consultarVendas();
             case 3:
                 break;
         }
@@ -41,11 +44,31 @@ public class Vendedor
         entrada.close();
 	}
 
-    private void consultar() {
-        ManipularArquivo.lerArquivo("consulta.txt");
+    private void consultarVendas() {
+        ManipularArquivos.lerRegistroVendas();
     }
 
-    private void comprar() {
+    private void cadastrarProdutos() {
+        System.out.println("Cadastrar Produto");
+        System.out.println();
+        String[] opcoes = { "SIM", "NAO" };
+        
+        int opcao;
+        
+        do {
+            String codigo     = JOptionPane.showInputDialog(null, "Código:     ");
+            String valor      = JOptionPane.showInputDialog(null, "Valor:      ");
+            String nome       = JOptionPane.showInputDialog(null, "Nome:       ");
+            String quantidade = JOptionPane.showInputDialog(null, "Quantidade: ");
+
+            String produto = codigo  + " | " + nome + " | " + valor + " | " + quantidade;
+
+            ManipularArquivos.escreverArquivo("Produtos.txt", produto);
+            
+            opcao = JOptionPane.showOptionDialog(null, "Deseja cadastrar mais produtos?", "Cadastro de Produtos",
+                    JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opcoes, opcoes[0]);
+
+        } while(opcao == 0);
 
     }
 }

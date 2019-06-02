@@ -10,13 +10,15 @@ import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
-public class ManipularArquivo 
+public class ManipularArquivos 
 {
     public static void escreverArquivo(String nomeArquivo, String conteudo) 
     {
+        String caminho = "C:/Users/ipetinate/Desktop/syscomp/Database/";
+
         try 
         {
-            File file = new File("produtos.txt");
+            File file = new File(caminho + nomeArquivo);
 
             if (!file.exists()) file.createNewFile();
 
@@ -32,13 +34,14 @@ public class ManipularArquivo
         }
     }
 
-    public static void lerArquivo(String nomeArquivo)
+    public static void lerRegistroVendas()
     {
+        String arquivo = "C:/Users/ipetinate/Desktop/syscomp/Database/Vendas.txt";
         String nome, codigo, valor, quantidade;
 
         try
         {
-            FileReader ler = new FileReader(nomeArquivo);
+            FileReader ler = new FileReader(arquivo);
             BufferedReader reader = new BufferedReader(ler);
 
             Scanner entrada = new Scanner(reader);

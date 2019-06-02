@@ -18,6 +18,7 @@ public class Comprador
         Scanner entrada = new Scanner (System.in);
         int opcao = 0;
 
+        System.out.println();
         System.out.println("__________________________________");
         System.out.println();
         System.out.println("O que deseja? \n");
@@ -34,7 +35,7 @@ public class Comprador
             case 1:
                 comprarProduto();
             case 2:
-                consultarVendas();
+                consultarCompras();
             case 3:
                 break;
         }
@@ -45,21 +46,27 @@ public class Comprador
     public void comprarProduto() {
 
         listarProdutos();
-        
-        int valor = 1000;
 
-        double preco = Integer.parseInt(JOptionPane.showInputDialog("Informe o valor do produto: "));
-        double qtd   = Integer.parseInt(JOptionPane.showInputDialog("Informe a quantidade:       "));
+        double codigo     = Integer.parseInt(JOptionPane.showInputDialog("Codigo:     "));
+        double valor      = Integer.parseInt(JOptionPane.showInputDialog("Valor:      "));
+        double quantidade = Integer.parseInt(JOptionPane.showInputDialog("Quantidade: "));
 
-        double resultado = preco * qtd;
+        double resultado = valor * quantidade;
         double divida = valor - resultado;
 
         JOptionPane.showMessageDialog(null, "Valor Gasto: " + resultado, "Resultado", JOptionPane.INFORMATION_MESSAGE);
         JOptionPane.showMessageDialog(null, "Saldo Restante: " + divida, "Resultado", JOptionPane.INFORMATION_MESSAGE);
+
+        registrarCompra(codigo, valor, quantidade);
     }
 
-    private void consultarVendas() {
+    private void consultarCompras() {
+        //
     }
     private void listarProdutos() {
+        // ManipularArquivo.
+    }
+    private void registrarCompra(double codigo, double valor, double quantidade) {
+        //
     }
 }
