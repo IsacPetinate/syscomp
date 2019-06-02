@@ -1,3 +1,9 @@
+/*
+** Esta classe é referente ao Vendedor (Proprietario)
+** Este ator acessa o sistema para cadastrar produtos 
+** e analisar/verificar seus produtos e suas vendas
+*/
+
 package ProjectSales;
 
 import java.util.Scanner;
@@ -12,6 +18,7 @@ public class Vendedor
         int opcao = 0;
 
         System.out.println("__________________________________");
+        System.out.println();
         System.out.println("O que deseja? \n");
 
         System.out.print("[1] Cadastrar Produto\n");
