@@ -1,20 +1,11 @@
 package ProjectSales;
 
+import java.util.Scanner;
+
 import javax.swing.JOptionPane;
 
-public class Comprador {
-    private Object produto;
-
-    //
-    public Object getProduto() {
-        return produto;
-    }
-
-    public void setProduto(Object produto) {
-        this.produto = produto;
-    }
-    //
-
+public class Comprador
+{
     public void comprarProduto() {
         int valor = 1000;
 
@@ -34,7 +25,34 @@ public class Comprador {
         JOptionPane.showMessageDialog(null, "Saldo Restante: " + divida, "Resultado", JOptionPane.INFORMATION_MESSAGE);
     }
 
-    public void cadastrarProduto(String nome, String codigo, String quantidade, String valor) {
-        // String caminho = "C:/Users/ipetinate/Desktop/syscomp/Database/produtos.txt";
+	public void menuComprador()
+    {
+        Scanner entrada = new Scanner (System.in);
+        int opcao = 0;
+
+        System.out.println("__________________________________");
+        System.out.println("O que deseja? \n");
+
+        System.out.print("[1] Cadastrar Produto\n");
+        System.out.print("[2] Consultar Vendas \n");
+        System.out.print("[3] Sair             \n");
+
+        System.out.print("Digite o Número da Opção Escolhida: ");
+        opcao = entrada.nextInt();
+
+        switch (opcao)
+        {
+            case 1:
+                comprarProduto();
+            case 2:
+                consultarVendas();
+            case 3:
+                break;
+        }
+
+        entrada.close();
+	}
+
+    private void consultarVendas() {
     }
 }

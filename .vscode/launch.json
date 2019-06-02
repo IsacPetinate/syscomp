@@ -1,25 +1,25 @@
 {
-  "configurations": [
-    {
-        "type": "java",
-        "name": "CodeLens (Launch) - Main",
-        "request": "launch",
-        "mainClass": "ProjectSales.Main",
-        "projectName": "syscomp_46481c12"
-    },
-    {
-        "type": "java",
-        "name": "Debug (Launch) - External Terminal",
-        "request": "launch",
-        "console": "externalTerminal",
-        "mainClass": ""
-    },
-    {
-        "type": "java",
-        "name": "CodeLens (Launch) - Main",
-        "request": "launch",
-        "mainClass": "ProjectSales.Main",
-        "projectName": "syscomp_86ad76da"
-    }
-]
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - External Terminal",
+            "request": "launch",
+            "console": "externalTerminal",
+            "mainClass": "ProjectSales.Main"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "ProjectSales.Main",
+            "projectName": "syscomp_46481c12"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "ProjectSales.Main",
+            "projectName": "syscomp_86ad76da"
+        }
+    ]
 }

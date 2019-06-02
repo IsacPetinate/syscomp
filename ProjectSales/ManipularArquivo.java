@@ -1,4 +1,4 @@
-package ProjectSales.FileIO;
+package ProjectSales;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -8,24 +8,21 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class FileReaderWriter 
+import javax.swing.JOptionPane;
+
+public class ManipularArquivo 
 {
     public static void escreverArquivo(String nomeArquivo, String conteudo) 
     {
         try 
         {
-            // String produto = nome + "|" + codigo + "|" + quantidade + "|" + valor;
-
             File file = new File("produtos.txt");
 
-            if (!file.exists()) {
-                file.createNewFile();
-            }
+            if (!file.exists()) file.createNewFile();
 
             FileWriter writer = new FileWriter(file.getAbsoluteFile());
             BufferedWriter bw = new BufferedWriter(writer);
 
-            // Escreve e fecha arquivo
             bw.write(conteudo);
             bw.close();
         } 
@@ -35,8 +32,10 @@ public class FileReaderWriter
         }
     }
 
-    public static void lerArquivo(String nomeArquivo, String produto, String valor, String codigo)
+    public static void lerArquivo(String nomeArquivo)
     {
+        String nome, codigo, valor, quantidade;
+
         try
         {
             FileReader ler = new FileReader(nomeArquivo);
@@ -46,17 +45,19 @@ public class FileReaderWriter
             String linha;
             String dados[];
 
-            while( (linha = reader.readLine()) != null ){
-                dados = linha.split("\\|");
-                produto = dados[0];
-                valor = dados[1];
-                codigo = dados[2];
+            while( (linha = reader.readLine()) != null )
+            {
+                dados      = linha.split("\\|");
+                codigo     = dados[0];
+                nome       = dados[1];
+                valor      = dados[2];
+                quantidade = dados[3];
 
-                System.out.print("Produto: "     + produto);
-                System.out.print(" - Valor: "    + valor);
-                System.out.println(" - Código: " + codigo);
+                String produto =  "Código: " + codigo  + " | " +   "Produto: " + nome + " | " + "Valor: " + valor + " | " + "Quantidade: " + quantidade;  
+
+                JOptionPane.showMessageDialog(null, produto, "Syscomp - Produtos", JOptionPane.PLAIN_MESSAGE);
             }
-
+            entrada.close();
             reader.close();
         }
         catch (IOException e)
