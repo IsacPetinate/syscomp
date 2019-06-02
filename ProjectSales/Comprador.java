@@ -2,8 +2,7 @@ package ProjectSales;
 
 import javax.swing.JOptionPane;
 
-public class Comprador
-{
+public class Comprador {
     private Object produto;
 
     //
@@ -35,8 +34,7 @@ public class Comprador
         JOptionPane.showMessageDialog(null, "Saldo Restante: " + divida, "Resultado", JOptionPane.INFORMATION_MESSAGE);
     }
 
-    public void cadastrarProduto(String nome, String codigo, int quantidade, double valor)
-    {
-        // Cadastro vai aqui
+    public void cadastrarProduto(String nome, String codigo, String quantidade, String valor) {
+        // String caminho = "C:/Users/ipetinate/Desktop/syscomp/Database/produtos.txt";
     }
 }

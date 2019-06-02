@@ -1,0 +1,3 @@
+Fulano da Silva|7.0|10001
+Ciclano Skywalker|9.5|10002
+Beltrano Stark|3.8|10003
