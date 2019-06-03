@@ -13,9 +13,6 @@ import javax.swing.JOptionPane;
 
 public class Comprador
 {
-    public static void main (String args[])
-    {
-    }
     public void menuComprador()
     {
         Scanner entrada = new Scanner (System.in);
@@ -32,7 +29,11 @@ public class Comprador
         System.out.print("[4] Sair             \n");
 
         System.out.print("Digite o Número da Opção Escolhida: ");
-        opcao = entrada.nextInt();
+        try {
+            opcao = entrada.nextInt();
+        } catch (Exception e) {
+            if (opcao <= 0 || opcao > 4) opcao = 3;
+        }
 
         switch (opcao)
         {
@@ -41,17 +42,13 @@ public class Comprador
             case 2:
                 consultarCompras();
             case 3:
-                voltar();
+                Main.menu();
             case 4:
                 System.exit(0);
         }
 
         entrada.close();
 	}
-
-    private void voltar() {
-        // Implementar...
-    }
 
     public void comprarProduto() {
 
@@ -75,7 +72,7 @@ public class Comprador
         ManipularArquivos.lerArquivo("Gastos.txt");
     }
     private void listarProdutos() {
-        // ManipularArquivos
+        ManipularArquivos.lerArquivo("Produtos.txt");
     }
     private void registrarCompra(double codigo, double valor, double quantidade) {
         String conteudo = codigo + " | " + valor + " | " + quantidade;

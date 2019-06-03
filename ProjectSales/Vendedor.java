@@ -24,34 +24,45 @@ public class Vendedor
         System.out.println("O que deseja? \n");
 
         System.out.print("[1] Cadastrar Produto\n");
-        System.out.print("[2] Consultar Vendas \n");
-        System.out.print("[3] Voltar           \n");
-        System.out.print("[4] Sair             \n");
+        System.out.print("[2] Lista de Produtos\n");
+        System.out.print("[3] Consultar Vendas \n");
+        System.out.print("[4] Voltar           \n");
+        System.out.print("[5] Sair             \n");
 
         System.out.print("Digite o Número da Opção Escolhida: ");
-        opcao = entrada.nextInt();
+        try {
+            opcao = entrada.nextInt();
+        } catch (Exception e) {
+            if (opcao <= 0 || opcao > 5) opcao = 3;
+        }
 
         switch (opcao)
         {
             case 1:
                 cadastrarProdutos();
             case 2:
-                consultarVendas();
+                listarProdutos();
             case 3:
-                voltar();
+                consultarVendas();
             case 4:
+                Main.menu();
+            case 5:
                 System.exit(0);
         }
 
         entrada.close();
 	}
 
-    private void voltar() {
-        // Implementar...
-    }
-
     private void consultarVendas() {
         ManipularArquivos.lerRegistroVendas();
+    }
+
+    private void listarProdutos() {
+        try {
+            ManipularArquivos.lerArquivo("Produtos.txt");
+        } catch (Exception e) {
+            menuVendedor();
+        }
     }
 
     private void cadastrarProdutos() {
