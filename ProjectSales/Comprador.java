@@ -26,9 +26,10 @@ public class Comprador
         System.out.println();
         System.out.println("O que deseja? \n");
 
-        System.out.print("[1] Comprar Produto\n");
+        System.out.print("[1] Comprar Produto  \n");
         System.out.print("[2] Consultar Vendas \n");
-        System.out.print("[3] Sair             \n");
+        System.out.print("[3] Voltar           \n");
+        System.out.print("[4] Sair             \n");
 
         System.out.print("Digite o Número da Opção Escolhida: ");
         opcao = entrada.nextInt();
@@ -40,11 +41,17 @@ public class Comprador
             case 2:
                 consultarCompras();
             case 3:
-                break;
+                voltar();
+            case 4:
+                System.exit(0);
         }
 
         entrada.close();
 	}
+
+    private void voltar() {
+        // Implementar...
+    }
 
     public void comprarProduto() {
 
@@ -65,7 +72,7 @@ public class Comprador
     }
 
     private void consultarCompras() {
-        ManipularArquivos.lerArquivo("Produtos.txt");
+        ManipularArquivos.lerArquivo("Gastos.txt");
     }
     private void listarProdutos() {
         // ManipularArquivos

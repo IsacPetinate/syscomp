@@ -10,13 +10,9 @@ import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
-// import java.util.ArrayList;
 
 public class Vendedor
 {
-    public static void main (String args[])
-    {
-    }
 	public void menuVendedor()
     {
         Scanner entrada = new Scanner (System.in);
@@ -29,7 +25,8 @@ public class Vendedor
 
         System.out.print("[1] Cadastrar Produto\n");
         System.out.print("[2] Consultar Vendas \n");
-        System.out.print("[3] Sair             \n");
+        System.out.print("[3] Voltar           \n");
+        System.out.print("[4] Sair             \n");
 
         System.out.print("Digite o Número da Opção Escolhida: ");
         opcao = entrada.nextInt();
@@ -41,11 +38,17 @@ public class Vendedor
             case 2:
                 consultarVendas();
             case 3:
-                break;
+                voltar();
+            case 4:
+                System.exit(0);
         }
 
         entrada.close();
 	}
+
+    private void voltar() {
+        // Implementar...
+    }
 
     private void consultarVendas() {
         ManipularArquivos.lerRegistroVendas();

@@ -19,6 +19,7 @@
     
 - Correções de Menu
     - Navegação para voltar nos menus
+        - Implementar metodos para o switch case funcionar
     - Nome das Opções
 
 - Bugs
