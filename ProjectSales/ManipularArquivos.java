@@ -34,6 +34,40 @@ public class ManipularArquivos
         }
     }
 
+    public static void lerArquivo (String nomeArquivo) {
+        String caminho = "C:/Users/ipetinate/Desktop/syscomp/Database/";
+        String nome, codigo, valor, quantidade;
+
+        try
+        {
+            FileReader ler = new FileReader(caminho + nomeArquivo);
+            BufferedReader reader = new BufferedReader(ler);
+
+            Scanner entrada = new Scanner(reader);
+            String linha;
+            String dados[];
+
+            while( (linha = reader.readLine()) != null )
+            {
+                dados      = linha.split("\\|");
+                codigo     = dados[0];
+                nome       = dados[1];
+                valor      = dados[2];
+                quantidade = dados[3];
+
+                String produto =  "Código: " + codigo  + " | " +   "Produto: " + nome + " | " + "Valor: R$" + valor + " | " + "Quantidade: " + quantidade;  
+
+                JOptionPane.showMessageDialog(null, produto, "Syscomp - Produtos", JOptionPane.PLAIN_MESSAGE);
+            }
+            entrada.close();
+            reader.close();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
     public static void lerRegistroVendas()
     {
         String arquivo = "C:/Users/ipetinate/Desktop/syscomp/Database/Vendas.txt";

@@ -61,12 +61,13 @@ public class Comprador
     }
 
     private void consultarCompras() {
-        //
+        ManipularArquivos.lerArquivo("Produtos.txt");
     }
     private void listarProdutos() {
-        // ManipularArquivo.
+        // ManipularArquivos
     }
     private void registrarCompra(double codigo, double valor, double quantidade) {
-        //
+        String conteudo = codigo + " | " + valor + " | " + quantidade;
+        ManipularArquivos.escreverArquivo("Gastos.txt", conteudo);
     }
 }
