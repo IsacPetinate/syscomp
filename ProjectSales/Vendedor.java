@@ -78,7 +78,7 @@ public class Vendedor
             String nome       = JOptionPane.showInputDialog(null, "Nome:       ");
             String quantidade = JOptionPane.showInputDialog(null, "Quantidade: ");
 
-            String produto = codigo  + " | " + nome + " | " + valor + " | " + quantidade;
+            String produto = codigo  + " | " + nome + " | " + valor + " | " + quantidade + "\n";
 
             ManipularArquivos.escreverArquivo("Produtos.txt", produto);
             

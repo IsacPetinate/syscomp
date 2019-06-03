@@ -26,7 +26,7 @@ public class ManipularArquivos
 
             if (!file.exists()) file.createNewFile();
 
-            FileWriter writer = new FileWriter(file.getAbsoluteFile());
+            FileWriter writer = new FileWriter(file.getAbsoluteFile(), true);
             BufferedWriter bw = new BufferedWriter(writer);
 
             bw.write(conteudo);

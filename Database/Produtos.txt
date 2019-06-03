@@ -1,1 +1,3 @@
-2 | chinelo | 40 | 45
+1 | LApis Azul | 1 | 1
+2 | Caderno | 5 | 5
+3 | Agenda | 5 | 5

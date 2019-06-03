@@ -23,4 +23,4 @@
     - Nome das Opções
 
 - Bugs
-    - Cadastro de Produtos só salva o último registro
+    - Cadastro de Produtos só salva o último registro - [resolvido]
