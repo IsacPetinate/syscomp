@@ -19,7 +19,7 @@ public class Main
 
         System.out.print("[1] Comprar Produtos   \n");
         System.out.print("[2] Gerenciar Produtos \n");
-        System.out.print("[3] Sair               \n");
+        // System.out.print("[3] Sair               \n");
 
         System.out.print("Digite o Número da Opção Escolhida: ");
         opcao = entrada.nextInt();

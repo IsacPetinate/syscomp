@@ -14,6 +14,9 @@ import javax.swing.JOptionPane;
 
 public class Vendedor
 {
+    public static void main (String args[])
+    {
+    }
 	public void menuVendedor()
     {
         Scanner entrada = new Scanner (System.in);
@@ -71,4 +74,8 @@ public class Vendedor
         } while(opcao == 0);
 
     }
+	public static void registrarVenda(double codigo, double valor, double quantidade) {
+        String conteudo = codigo + " | " + valor + " | " + quantidade;
+        ManipularArquivos.escreverArquivo("Vendas.txt", conteudo);
+	}
 }

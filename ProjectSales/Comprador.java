@@ -13,6 +13,9 @@ import javax.swing.JOptionPane;
 
 public class Comprador
 {
+    public static void main (String args[])
+    {
+    }
     public void menuComprador()
     {
         Scanner entrada = new Scanner (System.in);
@@ -58,6 +61,7 @@ public class Comprador
         JOptionPane.showMessageDialog(null, "Saldo Restante: " + divida, "Resultado", JOptionPane.INFORMATION_MESSAGE);
 
         registrarCompra(codigo, valor, quantidade);
+        Vendedor.registrarVenda(codigo, valor, quantidade);
     }
 
     private void consultarCompras() {

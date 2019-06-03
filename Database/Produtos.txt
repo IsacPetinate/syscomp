@@ -1,1 +1,4 @@
-null | null | null | null
+1 | Lapis Azul    | 1,50 | 50
+2 | Lapis Verde   | 1,50 | 50
+3 | Lapis Vermelho| 1,50 | 50
+4 | Lapis Amarelo | 1,50 | 50

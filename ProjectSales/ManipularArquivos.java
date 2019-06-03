@@ -6,16 +6,20 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
 public class ManipularArquivos 
 {
+    public static void main (String args[])
+    {
+    }
     public static void escreverArquivo(String nomeArquivo, String conteudo) 
     {
         String caminho = "C:/Users/ipetinate/Desktop/syscomp/Database/";
-
+        // ArrayList<String> dados = new ArrayList<String>();
         try 
         {
             File file = new File(caminho + nomeArquivo);
@@ -27,7 +31,7 @@ public class ManipularArquivos
 
             bw.write(conteudo);
             bw.close();
-        } 
+        }
         catch (IOException e)
         {
             e.printStackTrace();
@@ -46,6 +50,7 @@ public class ManipularArquivos
             Scanner entrada = new Scanner(reader);
             String linha;
             String dados[];
+            ArrayList<String> produtos = new ArrayList<String>();
 
             while( (linha = reader.readLine()) != null )
             {
@@ -56,8 +61,10 @@ public class ManipularArquivos
                 quantidade = dados[3];
 
                 String produto =  "Código: " + codigo  + " | " +   "Produto: " + nome + " | " + "Valor: R$" + valor + " | " + "Quantidade: " + quantidade;  
+                
+                produtos.add(produto);
 
-                JOptionPane.showMessageDialog(null, produto, "Syscomp - Produtos", JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.showMessageDialog(null, produtos, "Syscomp - Produtos", JOptionPane.PLAIN_MESSAGE);
             }
             entrada.close();
             reader.close();
