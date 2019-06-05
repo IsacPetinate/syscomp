@@ -14,14 +14,10 @@ public class MainPanel extends JPanel implements Serializable {
     public MainPanel() {
         super();
 
-    }
-
-    public void createMenu() {
-
         setLayout(new GridLayout(3, 3));
         JButton button = new JButton("Apertar");
         add(button);
-        
     }
+
 
 }

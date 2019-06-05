@@ -16,7 +16,6 @@ public class Janela {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         MainPanel panel = new MainPanel();
-        panel.createMenu();
         frame.setContentPane(panel);
     }
 }
