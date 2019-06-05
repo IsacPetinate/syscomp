@@ -1,7 +1,6 @@
 package ProjectSales;
 
 import java.util.Scanner;
-import ProjectSales.Comprador;
 
 public class Main {
     public static void main(String args[]) {
@@ -30,7 +29,8 @@ public class Main {
         try {
             opcao = entrada.nextInt();
         } catch (Exception e) {
-            if (opcao <= 0 || opcao > 4) opcao = 3;
+            if (opcao <= 0 || opcao > 4)
+                opcao = 3;
         }
 
         switch (opcao) {
@@ -46,5 +46,4 @@ public class Main {
 
         entrada.close();
     }
-
 }

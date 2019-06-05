@@ -18,15 +18,13 @@ public class Comprador
         Scanner entrada = new Scanner (System.in);
         int opcao = 0;
 
-        System.out.println();
-        System.out.println("__________________________________");
-        System.out.println();
-        System.out.println("O que deseja? \n");
+        System.out.println("\n__________________________________\n");
+        System.out.println("O que deseja?     \n");
 
-        System.out.print("[1] Comprar Produto  \n");
-        System.out.print("[2] Consultar Vendas \n");
-        System.out.print("[3] Voltar           \n");
-        System.out.print("[4] Sair             \n");
+        System.out.print("[1] Comprar Produto \n");
+        System.out.print("[2] Gastos Recentes \n");
+        System.out.print("[3] Voltar          \n");
+        System.out.print("[4] Sair            \n");
 
         System.out.print("Digite o Número da Opção Escolhida: ");
         try {
@@ -59,7 +57,8 @@ public class Comprador
         double quantidade = Integer.parseInt(JOptionPane.showInputDialog("Quantidade: "));
 
         double resultado = valor * quantidade;
-        double divida = valor - resultado;
+        double divida = resultado - valor;
+        
 
         JOptionPane.showMessageDialog(null, "Valor Gasto: " + resultado, "Resultado", JOptionPane.INFORMATION_MESSAGE);
         JOptionPane.showMessageDialog(null, "Saldo Restante: " + divida, "Resultado", JOptionPane.INFORMATION_MESSAGE);
