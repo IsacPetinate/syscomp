@@ -1,7 +1,12 @@
 {
     "configurations": [
-        
-
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - PanelTwoButtons",
+            "request": "launch",
+            "mainClass": "ProjectSales.GUI.PanelTwoButtons",
+            "projectName": "syscomp_46481c12"
+        },
         {
             "type": "java",
             "name": "Debug (Launch) - External Terminal",
