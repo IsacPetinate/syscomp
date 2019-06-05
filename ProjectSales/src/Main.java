@@ -1,4 +1,4 @@
-package ProjectSales;
+/*package ProjectSales;
 
 import java.util.Scanner;
 
@@ -8,6 +8,7 @@ public class Main {
     }
 
     public static void menu() {
+        
         Comprador comprador = new Comprador();
         Vendedor vendedor = new Vendedor();
         Scanner entrada = new Scanner(System.in);
@@ -47,3 +48,4 @@ public class Main {
         entrada.close();
     }
 }
+*/
