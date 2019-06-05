@@ -4,6 +4,13 @@
             "type": "java",
             "name": "CodeLens (Launch) - Janela",
             "request": "launch",
+            "mainClass": "ProjectSales.Janela",
+            "projectName": "syscomp_46481c12"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Janela",
+            "request": "launch",
             "mainClass": "ProjectSales.GUI.Janela",
             "projectName": "syscomp_46481c12"
         },
