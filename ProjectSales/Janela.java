@@ -8,10 +8,6 @@ import javax.swing.JPanel;
 
 public class Janela {
     public static void main(String[] args) {
-        janela();
-    }
-
-    public static void janela () {
         JFrame  frame  = new JFrame("Syscomp");
         JPanel  panel  = new JPanel(new GridLayout(4,4,4,4));
         
