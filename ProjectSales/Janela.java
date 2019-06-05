@@ -3,6 +3,7 @@ package ProjectSales;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -22,14 +23,12 @@ public class Janela {
         frame.setSize(500, 500);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         // Confgurações do Botao
-        button.setSize(30, 30);
+        button.setPreferredSize(new Dimension(30, 30));
+        // Confgurações do Panel
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         // Adição de elementos no frame
         frame.setContentPane(panel);
         frame.add(label);
         frame.add(button);
-    }
-
-    public void criaJanela() {
-        //
     }
 }
