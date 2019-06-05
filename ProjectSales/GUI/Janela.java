@@ -6,12 +6,8 @@ import javax.swing.JPanel;
 
 public class Janela {
     public static void main(String[] args) {
-    
-    }
-
-    public void criaJanela(String tituloLabel) {
         JFrame frame = new JFrame("Syscomp");
-        JLabel label = new JLabel(tituloLabel);
+        JLabel label = new JLabel("tituloLabel");
         JPanel panel = new JPanel();
 
         frame.setVisible(true);
@@ -20,5 +16,9 @@ public class Janela {
 
         frame.add(label);
         frame.add(panel);
+    }
+
+    public void criaJanela() {
+        //
     }
 }
